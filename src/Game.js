@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Board from "./Board.js";
+import Info from "./Info.js";
 
 export default function Game() {
     const [history, setHistory] = useState([Array(9).fill(null)]);
@@ -41,7 +42,7 @@ export default function Game() {
                 />
             </div>
             <div className="game-info">
-                <ol>{moves}</ol>
+                <Info moves={moves} />
             </div>
         </div>
     );
